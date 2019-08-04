@@ -93,3 +93,16 @@ resource "google_dns_record_set" "protonmail_domainkey_txt" {
   ]
 
 }
+
+resource "google_dns_record_set" "lets_encrypt_validation" {
+  name = "_acme-challenge.nhyne.dev."
+  type = "TXT"
+  ttl  = 300
+
+  managed_zone = google_dns_managed_zone.nhyne_dev.name
+
+  rrdatas = [
+    "HRR0vtxahkMr_2nc3l1PXWC-8EngSw0MABZb0ahn7UY"
+  ]
+
+}
