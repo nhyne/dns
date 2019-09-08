@@ -102,7 +102,7 @@ resource "google_dns_record_set" "lets_encrypt_validation" {
   managed_zone = google_dns_managed_zone.nhyne_dev.name
 
   rrdatas = [
-    "HRR0vtxahkMr_2nc3l1PXWC-8EngSw0MABZb0ahn7UY"
+    "Lb0ZYnDR55XIlf_HubPMJVBbb-IxT1F3m12BovzvhEU"
   ]
 
 }
