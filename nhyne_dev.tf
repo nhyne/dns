@@ -102,7 +102,18 @@ resource "google_dns_record_set" "lets_encrypt_validation" {
   managed_zone = google_dns_managed_zone.nhyne_dev.name
 
   rrdatas = [
-    "Lb0ZYnDR55XIlf_HubPMJVBbb-IxT1F3m12BovzvhEU"
+    "SG9FjMNr4YoYc5MKSN3E5a6aL83dfmjBVuHo5xqzpKw"
   ]
+}
 
+resource "google_dns_record_set" "pi_hole" {
+  name = "pi-hole.nhyne.dev."
+  type = "A"
+  ttl  = 300
+
+  managed_zone = google_dns_managed_zone.nhyne_dev.name
+
+  rrdatas = [
+    "192.168.86.204"
+  ]
 }
